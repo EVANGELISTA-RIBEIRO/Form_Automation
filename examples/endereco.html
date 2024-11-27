@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Requisição de Transporte Aéreo de Carga</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        h1, h2 {
+            text-align: center;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: bold;
+        }
+
+        .form-group select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            font-weight: bold;
+            color: #fff;
+            background-color: #007bff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Requisição de Transporte Aéreo de Carga</h1>
+        <h2>Telecomunicações Brasileiras S.A.</h2>
+
+        <form>
+            <fieldset>
+                <legend>2. Dados da Origem</legend>
+                <div class="form-group">
+                    <label>Endereço de Origem:</label>
+                    <select name="endereco_origem">
+                        <option value="COPE-P">COPE-P (DF)</option>
+                        <option value="COPE-S">COPE-S (RJ)</option>
+                        <option value="Gateway-Campo-Grande">Gateway de Campo Grande</option>
+                        <option value="Gateway-Florianopolis">Gateway de Florianópolis</option>
+                        <option value="Gateway-Salvador">Gateway de Salvador</option>
+                        <option value="CMS1">CMS1</option>
+                        <option value="CMS2">CMS2</option>
+                        <option value="CMS3">CMS3</option>
+                        <option value="CMS4">CMS4</option>
+                        <option value="CMS5">CMS5</option>
+                        <option value="CMS6">CMS6</option>
+                        <option value="CMS7">CMS7</option>
+                        <option value="CMS8">CMS8</option>
+                        <option value="Betel">Betel Satcom</option>
+                        <option value="Master-Services">Master Services</option>
+                        <option value="NEXVIA">NEXVIA</option>
+                        <option value="TELESPAZIO">TELESPAZIO</option>
+                        <option value="Deposito">Depósito Telebras</option>
+                        <option value="SEDE">SEDE</option>
+                        <option value="JBM">JBM Instrumento</option>
+                    </select>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>3. Dados do Destino</legend>
+                <div class="form-group">
+                    <label>Endereço de Destino:</label>
+                    <select name="endereco_destino">
+                        <option value="COPE-P">COPE-P (DF)</option>
+                        <option value="COPE-S">COPE-S (RJ)</option>
+                        <option value="Gateway-Campo-Grande">Gateway de Campo Grande</option>
+                        <option value="Gateway-Florianopolis">Gateway de Florianópolis</option>
+                        <option value="Gateway-Salvador">Gateway de Salvador</option>
+                        <option value="CMS1">CMS1</option>
+                        <option value="CMS2">CMS2</option>
+                        <option value="CMS3">CMS3</option>
+                        <option value="CMS4">CMS4</option>
+                        <option value="CMS5">CMS5</option>
+                        <option value="CMS6">CMS6</option>
+                        <option value="CMS7">CMS7</option>
+                        <option value="CMS8">CMS8</option>
+                        <option value="Betel">Betel Satcom</option>
+                        <option value="Master-Services">Master Services</option>
+                        <option value="NEXVIA">NEXVIA</option>
+                        <option value="TELESPAZIO">TELESPAZIO</option>
+                        <option value="Deposito">Depósito Telebras</option>
+                        <option value="SEDE">SEDE</option>
+                        <option value="JBM">JBM Instrumento</option>>
+                    </select>
+                </div>
+            </fieldset>
+
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+</body>
+</html>
