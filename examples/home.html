@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Requisição de Transporte Aéreo de Carga</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        h1, h2 {
+            text-align: center;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        table th, table td {
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: left;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: bold;
+        }
+
+        .form-group input, 
+        .form-group select, 
+        .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        .checkbox-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .checkbox-group label {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            font-weight: bold;
+            color: #fff;
+            background-color: #007bff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Requisição de Transporte Aéreo de Carga</h1>
+        <h2>Telecomunicações Brasileiras S.A.</h2>
+
+        <form>
+            <fieldset>
+                <legend>1. Dados da Carga</legend>
+
+                <table>
+                    <tr>
+                        <th>Objeto (conteúdo)</th>
+                        <th>Dimensões</th>
+                        <th>Peso</th>
+                        <th>Valor da NF</th>
+                    </tr>
+                    <tr>
+                        <td><input type="text" name="objeto1"></td>
+                        <td>
+                            <input type="text" placeholder="Comprimento" name="comprimento1" style="width: 30%;"> x
+                            <input type="text" placeholder="Largura" name="largura1" style="width: 30%;"> x
+                            <input type="text" placeholder="Altura" name="altura1" style="width: 30%;">
+                        </td>
+                        <td><input type="number" name="peso1" step="0.01"></td>
+                        <td><input type="text" name="valor1"></td>
+                    </tr>
+                    <!-- Replicar mais linhas aqui conforme necessário -->
+                </table>
+
+                <div class="checkbox-group">
+                    <label><input type="checkbox" name="fragil"> Frágil</label>
+                    <label><input type="checkbox" name="liquido"> Líquido</label>
+                    <label><input type="checkbox" name="refrigerado"> Refrigerado</label>
+                    <label><input type="checkbox" name="toxico"> Tóxico</label>
+                    <label><input type="checkbox" name="outro"> Outro</label>
+                </div>
+
+                <div class="form-group">
+                    <label>A carga está embalada?</label>
+                    <label><input type="radio" name="embalada" value="sim"> Sim</label>
+                    <label><input type="radio" name="embalada" value="nao"> Não</label>
+                </div>
+
+                <div class="form-group">
+                    <label>Será necessário algum tipo de embalagem?</label>
+                    <label><input type="radio" name="necessario_embalagem" value="sim"> Sim</label>
+                    <label><input type="radio" name="necessario_embalagem" value="nao"> Não</label>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>2. Dados da Origem</legend>
+                <div class="form-group">
+                    <label>Local:</label>
+                    <input type="text" name="local_origem">
+                </div>
+                <div class="form-group">
+                    <label>Data e hora:</label>
+                    <input type="datetime-local" name="data_hora_origem">
+                </div>
+                <div class="form-group">
+                    <label>Endereço:</label>
+                    <textarea name="endereco_origem"></textarea>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>3. Dados do Destino</legend>
+                <div class="form-group">
+                    <label>Local:</label>
+                    <input type="text" name="local_destino">
+                </div>
+                <div class="form-group">
+                    <label>Data e hora:</label>
+                    <input type="datetime-local" name="data_hora_destino">
+                </div>
+                <div class="form-group">
+                    <label>Endereço:</label>
+                    <textarea name="endereco_destino"></textarea>
+                </div>
+            </fieldset>
+
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+</body>
+</html>
