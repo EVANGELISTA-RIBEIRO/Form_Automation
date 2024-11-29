@@ -218,20 +218,19 @@ body {
   }
   
   .dados-destino {
-    max-width: 500px;
+    max-width: 600px;
     margin: 20px auto;
     background: #fff;
     border-radius: 8px;
     padding: 20px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   }
   
   .large-title {
     font-family: 'Poppins', sans-serif;
     font-size: 24px;
-    text-align: center;
-    margin-bottom: 20px;
     color: #242731;
+    margin-bottom: 20px;
   }
   
   .progress-bar {
