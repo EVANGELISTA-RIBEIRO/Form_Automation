@@ -93,13 +93,15 @@ body {
   }
   
   .cancelar-btn {
-    background-color: #f0f1f3;
-    color: #858d9d;
+    background-color: #ff0000;
+    color: #fff;
+    text-decoration: none;
   }
   
   .proximo-btn {
     background-color: #009ed8;
     color: #fff;
+    text-decoration: none;
   }
   
   body {
@@ -199,8 +201,9 @@ body {
   }
   
   .btn.voltar {
-    background-color: #f0f1f3;
-    color: #858d9d;
+    background-color: #009ed8;
+    color: #fff;
+    text-decoration: none;
   }
   
   .btn.proximo {
@@ -309,8 +312,9 @@ body {
   }
   
   .button.cancelar, .button.voltar {
-    background: #f0f1f3;
-    color: #858d9d;
+    background: #009ed8;
+    color: #fff;
+    text-decoration: none;
   }
   
   .button.proximo {
@@ -318,7 +322,13 @@ body {
     color: #fff;
     text-decoration: none;
   }
-  
+
+  .button.salvar {
+    background: #08ff08;
+    color: #fff;
+    text-decoration: none;
+  }
+
   .button:hover {
     opacity: 0.9;
   }
