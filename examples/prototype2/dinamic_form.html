@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="dados-equipamento">
+        <h1 class="large-title">Dados Equipamento</h1>
+        <label for="n-transporte">Nº Transporte</label>
+        <input type="text" id="n-transporte">
+
+        <label for="motivo">Motivo</label>
+        <input type="text" id="motivo">
+
+        <!-- Adicionar volume -->
+        <div id="volumes-container">
+            <div class="volume">
+                <h2>Volume 1</h2>
+                <!-- Campos do volume -->
+                <label for="cod-sap">COD (SAP)</label>
+                <input type="text" id="cod-sap">
+
+                <!-- Campos de equipamentos -->
+                <div class="equipamentos">
+                    <label for="alias">Alias</label>
+                    <input type="text" id="alias">
+                    <!-- Outros campos de equipamentos -->
+                </div>
+                <button type="button" onclick="adicionarEquipamento()">Adicionar Equipamento</button>
+            </div>
+        </div>
+        <button type="button" onclick="adicionarVolume()">Adicionar Volume</button>
+    </div>
+
+    <script>
+        function adicionarVolume() {
+            const volumeContainer = document.createElement('div');
+            volumeContainer.classList.add('volume');
+            volumeContainer.innerHTML = `
+                <h2>Volume ${document.querySelectorAll('.volume').length + 1}</h2>
+                <label for="cod-sap">COD (SAP)</label>
+                <input type="text" id="cod-sap">
+                <div class="equipamentos">
+                    <label for="alias">Alias</label>
+                    <input type="text" id="alias">
+                </div>
+                <button type="button" onclick="adicionarEquipamento()">Adicionar Equipamento</button>
+            `;
+            document.getElementById('volumes-container').appendChild(volumeContainer);
+        }
+
+        function adicionarEquipamento() {
+            const volume = event.target.closest('.volume');
+            const equipamentoContainer = document.createElement('div');
+            equipamentoContainer.innerHTML = `
+                <label for="alias">Alias</label>
+                <input type="text" id="alias">
+            `;
+            volume.querySelector('.equipamentos').appendChild(equipamentoContainer);
+        }
+    </script>
+</body>
+
+</html>

@@ -1,6 +1,8 @@
 // Aplicando máscara no campo telefone
-import { aplicarMascaraTelefone } from './mascaras.js';
+import { aplicarMascaraTelefone } from "./mascaras.js";
 
-document.addEventListener('DOMContentLoaded', () => {
-    document.querySelectorAll('.mask-tel').forEach(campo => aplicarMascaraTelefone(campo));
+document.addEventListener("DOMContentLoaded", () => {
+  document
+    .querySelectorAll(".mask-tel")
+    .forEach((campo) => aplicarMascaraTelefone(campo));
 });
