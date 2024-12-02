@@ -127,5 +127,3 @@ Com base nesta planilha, o dropdown gerado será:
 ## Conclusão
 
 Com este fluxo, você pode preencher dinamicamente um dropdown em Django utilizando dados extraídos de uma planilha Excel. É uma solução eficiente para importar e integrar grandes volumes de dados diretamente em sua aplicação sem a necessidade de APIs.
-
-Se precisar de mais ajuda ou quiser aprimorar este processo, não hesite em pedir! 😊
