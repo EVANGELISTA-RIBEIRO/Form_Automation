@@ -14,46 +14,46 @@
       <div class="active-indicator"></div>
       <div class="default-line"></div>
       <div class="active-indicator"></div>
-      <div class="default-line1"></div>
-      <div class="default-indicator"></div>
-      <div class="default-line1"></div>
+      <div class="default-line"></div>
+      <div class="active-indicator"></div>
+      <div class="default-line2"></div>
       <div class="default-indicator"></div>
     </div>
 
     <form>
       <label>
         Local Destino
-        <input type="text" placeholder="Digite o local de Destino">
+        <input type="text" id="localD" placeholder="Digite o local de Destino">
       </label>
 
       <label>
         Endereço de Destino
-        <input type="text" placeholder="Digite o endereço de Destino">
+        <input type="text" id="endD" placeholder="Digite o endereço de Destino">
       </label>
 
       <label>
         Ponto de Referência
-        <input type="text" placeholder="Digite o ponto de referência">
+        <input type="text" id="refD" placeholder="Digite o ponto de referência">
       </label>
 
       <label>
         Nome do Responsável
-        <input type="text" placeholder="Digite o nome do responsável">
+        <input type="text" id="nomeD" placeholder="Digite o nome do responsável">
       </label>
 
       <label>
         Telefone do Responsável
-        <input type="tel" placeholder="Digite o telefone">
+        <input type="tel" id="telD" class="mask-tel" placeholder="Digite o telefone">
       </label>
 
       <label>
         Data da Entrega
-        <input type="date">
+        <input type="date" id="dataD">
       </label>
 
       <label>
         Hora da Entrega
-        <input type="time">
+        <input type="time" id="horaD">
       </label>
 
       <label>
@@ -67,5 +67,7 @@
       <a href="./form4.html" class="button proximo">Próximo</a>
     </div>
   </div>
+
+<script type="module" src="../js/form3.js"></script>
 </body>
 </html>

@@ -23,37 +23,37 @@
     <form>
       <label>
         Local Origem
-        <input type="text" placeholder="Digite o local de origem">
+        <input type="text" id="localO" placeholder="Digite o local de origem">
       </label>
 
       <label>
         Endereço de Origem
-        <input type="text" placeholder="Digite o endereço de origem">
+        <input type="text" id="endO" placeholder="Digite o endereço de origem">
       </label>
 
       <label>
         Ponto de Referência
-        <input type="text" placeholder="Digite o ponto de referência">
+        <input type="text" id="refO" placeholder="Digite o ponto de referência">
       </label>
 
       <label>
         Nome do Responsável
-        <input type="text" placeholder="Digite o nome do responsável">
+        <input type="text" id="nomeO" placeholder="Digite o nome do responsável">
       </label>
 
       <label>
         Telefone do Responsável
-        <input type="tel" placeholder="Digite o telefone">
+        <input type="tel" id="telO" class="mask-tel" placeholder="Digite o telefone">
       </label>
 
       <label>
         Data da Coleta
-        <input type="date">
+        <input type="date" id="dataO">
       </label>
 
       <label>
         Hora da Coleta
-        <input type="time">
+        <input type="time" id="horaO">
       </label>
 
       <label>
@@ -67,5 +67,7 @@
       <a href="./form3.html" class="button proximo">Próximo</a>
     </div>
   </div>
+
+<script type="module" src="../js/form2.js"></script>
 </body>
 </html>
