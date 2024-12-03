@@ -1,3 +1,5 @@
+// <--- CÓDIGO ANTIGO --->
+//
 // function adicionarVolume() {
 //   const volumeContainer = document.createElement("div");
 //   volumeContainer.classList.add("volume");
@@ -55,11 +57,25 @@ function adicionarVolume() {
   volumeContainer.id = `volume-${volumeIndex}`; // ID único para o volume
   volumeContainer.innerHTML = `
         <h2>Volume ${volumeIndex}</h2>
-        <label for="cod-sap-volume-${volumeIndex}">COD (SAP)</label>
-        <input type="text" id="cod-sap-volume-${volumeIndex}">
         <div class="equipamentos">
+            <label for="comprimento-${volumeIndex}">Comprimento (cm)</label>
+            <input type="text" id="comprimento-${volumeIndex}" class="mask-cm">
+            <label for="largura-${volumeIndex}">Largura (cm)</label>
+            <input type="text" id="largura-${volumeIndex}" class="mask-cm">
+            <label for="altura-${volumeIndex}">Altura (cm)</label>
+            <input type="text" id="altura-${volumeIndex}" class="mask-cm">
+            <label for="peso-${volumeIndex}">Peso (kg)</label>
+            <input type="text" id="peso-${volumeIndex}" class="mask-kg">
+            <label for="valor-${volumeIndex}">Valor (R$)</label>
+            <input type="text" id="valor-${volumeIndex}" class="mask-kg">
+            <label for="cod-sap-volume-${volumeIndex}">COD (SAP)</label>
+            <input type="text" id="cod-sap-volume-${volumeIndex}">
             <label for="alias-volume-${volumeIndex}-equip-1">Alias</label>
             <input type="text" id="alias-volume-${volumeIndex}-equip-1">
+            <label for="part-number-${volumeIndex}">Part Number</label>
+            <input type="text" id="part-number-${volumeIndex}">
+            <label for="serial-number-${volumeIndex}">Serial Number</label>
+            <input type="text" id="serial-number-${volumeIndex}">
         </div>
         <button type="button" onclick="adicionarEquipamento(${volumeIndex})">Adicionar Equipamento</button>
     `;
@@ -91,8 +107,12 @@ function adicionarEquipamento(volumeIndex) {
   // Cria o novo equipamento
   const equipamentoContainer = document.createElement("div");
   equipamentoContainer.innerHTML = `
-        <label for="alias-volume-${volumeIndex}-equip-${equipamentoIndex}">Alias</label>
-        <input type="text" id="alias-volume-${volumeIndex}-equip-${equipamentoIndex}">
+        <label for="cod-sap-${volumeIndex}-equip-${equipamentoIndex}">COD (SAP)</label>
+        <input type="text" id="cod-sap-${volumeIndex}-equip-${equipamentoIndex}">
+        <label for="part-number-${volumeIndex}-equip-${equipamentoIndex}">Part Number</label>
+        <input type="text" id="part-number-${volumeIndex}-equip-${equipamentoIndex}">
+        <label for="serial-number-${volumeIndex}-equip-${equipamentoIndex}">Serial Number</label>
+        <input type="text" id="serial-number-${volumeIndex}-equip-${equipamentoIndex}">
     `;
   equipamentosContainer.appendChild(equipamentoContainer);
 }
