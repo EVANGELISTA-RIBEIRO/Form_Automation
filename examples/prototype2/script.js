@@ -1,49 +1,3 @@
-// <--- CÓDIGO ANTIGO --->
-//
-// function adicionarVolume() {
-//   const volumeContainer = document.createElement("div");
-//   volumeContainer.classList.add("volume");
-//   volumeContainer.innerHTML = `
-//         <h2>Volume ${document.querySelectorAll(".volume").length + 1}</h2>
-//         <label for="cod-sap">COD (SAP)</label>
-//         <input type="text" id="cod-sap">
-//         <div class="equipamentos">
-//                     <label for="alias">Alias</label>
-//                     <input type="text" id="alias">
-//                     <label for="comprimento">Comprimento (cm)</label>
-//                     <input type="text" id="comprimento" class="mask-cm">
-//                     <label for="largura">Largura (cm)</label>
-//                     <input type="text" id="largura" class="mask-cm">
-//                     <label for="altura">Altura (cm)</label>
-//                     <input type="text" id="altura" class="mask-cm">
-//                     <label for="peso">Peso (kg)</label>
-//                     <input type="text" id="peso" class="mask-kg">
-//                     <label for="valor">Valor (R$)</label>
-//                     <input type="text" id="valor" class="mask-kg">
-//                     <label for="part-number">Part Number</label>
-//                     <input type="text" id="part-number">
-//                     <label for="serial-number">Serial Number</label>
-//                     <input type="text" id="serial-number">
-//         </div>
-//         <button type="button" onclick="adicionarEquipamento()">Adicionar Equipamento</button>
-//     `;
-//   document.getElementById("volumes-container").appendChild(volumeContainer);
-// }
-
-// function adicionarEquipamento() {
-//   const volume = event.target.closest(".volume");
-//   const equipamentoContainer = document.createElement("div");
-//   equipamentoContainer.innerHTML = `
-//         <label for="cod-sap">COD (SAP)</label>
-//         <input type="text" id="cod-sap">
-//         <label for="part-number">Part Number</label>
-//         <input type="text" id="part-number">
-//         <label for="serial-number">Serial Number</label>
-//         <input type="text" id="serial-number">
-//     `;
-//   volume.querySelector(".equipamentos").appendChild(equipamentoContainer);
-// }
-
 function adicionarVolume() {
   const container = document.getElementById("volumes-container");
   if (!container) {
@@ -66,16 +20,6 @@ function adicionarVolume() {
             <input type="text" id="altura-${volumeIndex}" class="mask-cm">
             <label for="peso-${volumeIndex}">Peso (kg)</label>
             <input type="text" id="peso-${volumeIndex}" class="mask-kg">
-            <label for="valor-${volumeIndex}">Valor (R$)</label>
-            <input type="text" id="valor-${volumeIndex}" class="mask-kg">
-            <label for="cod-sap-volume-${volumeIndex}">COD (SAP)</label>
-            <input type="text" id="cod-sap-volume-${volumeIndex}">
-            <label for="alias-volume-${volumeIndex}-equip-1">Alias</label>
-            <input type="text" id="alias-volume-${volumeIndex}-equip-1">
-            <label for="part-number-${volumeIndex}">Part Number</label>
-            <input type="text" id="part-number-${volumeIndex}">
-            <label for="serial-number-${volumeIndex}">Serial Number</label>
-            <input type="text" id="serial-number-${volumeIndex}">
         </div>
         <button type="button" onclick="adicionarEquipamento(${volumeIndex})">Adicionar Equipamento</button>
     `;
@@ -99,20 +43,21 @@ function adicionarEquipamento(volumeIndex) {
     return;
   }
 
-  // Conta os equipamentos adicionados no contêiner
+  // Conta os equipamentos já adicionados (verifica quantos elementos de entrada existem)
   const equipamentoIndex =
-    equipamentosContainer.querySelectorAll('input[id^="alias-volume"]').length +
-    1;
+    equipamentosContainer.querySelectorAll('input[id^="cod-sap-"]').length + 1;
 
   // Cria o novo equipamento
   const equipamentoContainer = document.createElement("div");
   equipamentoContainer.innerHTML = `
-        <label for="cod-sap-${volumeIndex}-equip-${equipamentoIndex}">COD (SAP)</label>
+        <label for="cod-sap-${volumeIndex}-equip-${equipamentoIndex}">COD (SAP) - ${equipamentoIndex}</label>
         <input type="text" id="cod-sap-${volumeIndex}-equip-${equipamentoIndex}">
-        <label for="part-number-${volumeIndex}-equip-${equipamentoIndex}">Part Number</label>
+        <label for="part-number-${volumeIndex}-equip-${equipamentoIndex}">Part Number - ${equipamentoIndex}</label>
         <input type="text" id="part-number-${volumeIndex}-equip-${equipamentoIndex}">
-        <label for="serial-number-${volumeIndex}-equip-${equipamentoIndex}">Serial Number</label>
+        <label for="serial-number-${volumeIndex}-equip-${equipamentoIndex}">Serial Number - ${equipamentoIndex}</label>
         <input type="text" id="serial-number-${volumeIndex}-equip-${equipamentoIndex}">
+        <label for="valor-${volumeIndex}-equip-${equipamentoIndex}">Valor (R$) - ${equipamentoIndex}</label>
+        <input type="text" id="valor-${volumeIndex}-equip-${equipamentoIndex}" class="mask-monetario">
     `;
   equipamentosContainer.appendChild(equipamentoContainer);
 }
