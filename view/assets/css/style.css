@@ -1,3 +1,5 @@
+/* FORM 1 */
+
 body {
   font-family: "Inter", sans-serif;
   margin: 0;
@@ -111,7 +113,9 @@ body {
   background-color: #f9f9f9;
 }
 
-/* CSS DADOS DE ORIGEM */
+/* --------------------------------------------------------------------------------------------------------------------------------------------- */
+
+/* FORM 2 */
 
 .dados-origem {
   max-width: 600px;
@@ -211,7 +215,9 @@ form textarea {
   color: #fff;
 }
 
-/* CSS DADOS DESTINO  */
+/* --------------------------------------------------------------------------------------------------------------------------------------------- */
+
+/* FORM 3 */
 
 body {
   font-family: "Inter", sans-serif;
@@ -337,7 +343,9 @@ textarea {
   opacity: 0.9;
 }
 
-/* css dados equipamento */
+/* --------------------------------------------------------------------------------------------------------------------------------------------- */
+
+/* FORM 4 */
 
 body {
   font-family: "Inter", sans-serif;
@@ -480,4 +488,14 @@ h1 {
   color: red;
   font-size: 12px;
   margin-top: 5px;
+}
+
+.buttonvolume{
+  background-color: #009ed8;
+  color: white;
+}
+
+.buttonequipamento {
+  background-color: #009ed8;
+  color: white;
 }
