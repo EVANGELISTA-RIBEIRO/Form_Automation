@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dados Destino</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+
+<body>
+    <div class="dados-equipamento">
+        <h1 class="large-title">Dados Equipamentos</h1>
+
+        <!-- Barra de progresso -->
+        <div class="progress-bar">
+            <div class="active-indicator"></div>
+            <div class="default-line"></div>
+            <div class="active-indicator"></div>
+            <div class="default-line"></div>
+            <div class="active-indicator"></div>
+            <div class="default-line"></div>
+            <div class="active-indicator"></div>
+        </div>
+
+        <!-- Campo global, nº e motivo -->
+        <div class="campo">
+            <label for="n-transporte">Nº Transporte</label>
+            <input type="text" id="n-transporte">
+        </div>
+        <div class="campo">
+            <label for="motivo">Motivo</label>
+            <input type="text" id="motivo">
+        </div>
+        <br>
+
+        <!-- Adicionar volume -->
+        <div id="volumes-container">
+            <div class="volume" id="volume-1"> <!-- Adicionado o ID volume-1 -->
+                <h2>Volume 1</h2>
+                <div class="equipamentos">
+                <!-- Campos do volume -->
+                    <div class="campo">
+                        <label for="comprimento">Comprimento (cm)</label>
+                        <input type="text" id="comprimento" class="mask-cm">
+                    </div>
+                    <div class="campo">
+                        <label for="largura">Largura (cm)</label>
+                        <input type="text" id="largura" class="mask-cm">
+                    </div>
+                    <div class="campo">
+                        <label for="altura">Altura (cm)</label>
+                        <input type="text" id="altura" class="mask-cm">
+                    </div>
+                    <div class="campo">
+                        <label for="peso">Peso (kg)</label>
+                        <input type="text" id="peso" class="mask-kg">
+                    </div>
+                </div>
+                <!-- Passando o índice do volume (1) -->
+                <div class="add_buttons">
+                    <button class="buttonequipamento" type="button" onclick="adicionarEquipamento(1)">Adicionar Equipamento</button>
+                </div>
+                
+            </div>
+        </div>
+        
+        <div class="button-group">
+            <a href="./form3.html" class="button voltar">Voltar</a>
+            <button class="buttonvolume" type="button" onclick="adicionarVolume()">Adicionar Volume</button>
+            <a href="./form4.html" class="button salvar">Salvar</a>
+        </div>
+    </div>
+
+    <script type="module" src="../js/form5.js"></script>
+</body>
+</html>
