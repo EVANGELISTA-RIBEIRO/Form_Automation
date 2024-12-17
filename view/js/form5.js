@@ -1,4 +1,4 @@
-// Aplicando máscaras em campos do form4
+// Aplicando máscaras em campos do form5
 import {
   aplicarMascaraMonetario,
   aplicarMascaraCm,
@@ -36,7 +36,7 @@ function adicionarVolume() {
                 <input type="text" id="peso-${volumeIndex}" class="mask-kg">
             </div>
         </div>
-        <button type="button" onclick="adicionarEquipamento(${volumeIndex})">Adicionar Equipamento</button>
+          <button class="buttonvolume" type="button" onclick="adicionarEquipamento(${volumeIndex})">Adicionar Equipamento</button>
     `;
   container.appendChild(volumeContainer);
 
