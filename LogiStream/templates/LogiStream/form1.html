@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sobre o Equipamento</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+
+<body>
+  <div class="container">
+    <h1>Sobre o Equipamento</h1>
+
+    <div class="progress-bar">
+      <div class="active-indicator"></div>
+      <div class="default-line1"></div>
+      <div class="default-indicator"></div>
+      <div class="default-line1"></div>
+      <div class="default-indicator"></div>
+      <div class="default-line1"></div>
+      <div class="default-indicator"></div>
+    </div>
+
+    <form class="form">
+      <label>A carga possui alguma peculiaridade?</label>
+      <input type="text" placeholder="Descreva aqui">
+
+      <label>A carga a ser transportada já está embalada?</label>
+      <div class="radio-group">
+        <label><input type="radio" name="embalada" value="sim"> Sim</label>
+        <label><input type="radio" name="embalada" value="nao"> Não</label>
+      </div>
+
+      <label>Será necessário algum tipo de embalagem?</label>
+      <div class="radio-group">
+        <label><input type="radio" name="embalagem" value="sim"> Sim</label>
+        <label><input type="radio" name="embalagem" value="nao"> Não</label>
+      </div>
+
+      <label>Tipo de Embalagem</label>
+      <input type="text" placeholder="Informe o tipo">
+
+      <label>Urgente?</label>
+      <div class="radio-group">
+        <label><input type="radio" name="urgente" value="sim"> Sim</label>
+        <label><input type="radio" name="urgente" value="nao"> Não</label>
+      </div>
+
+      <label>Qual o prazo máximo?</label>
+      <input type="text" placeholder="Informe o prazo">
+
+      <div class="button-group">
+        <button type="button" class="cancelar-btn">Cancelar</button>
+        <a href="./form2.html" class="button proximo">Próximo</a>
+      </div>
+    </form>
+  </div>
+
+</body>
+
+</html>
