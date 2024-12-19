@@ -29,6 +29,7 @@ media
 *$py.class
 __pycache__/
 *.pyc
+.pyc
 
 # Distribution / packaging
 .Python build/
