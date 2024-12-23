@@ -6,6 +6,9 @@ __pycache__/
 # C extensions
 *.so
 
+# Ignorar todos os diretórios __pycache__ em qualquer nível
+**/__pycache__/
+
 # Distribution / packaging
 .Python
 build/
@@ -58,8 +61,7 @@ cover/
 # Django stuff:
 *.log
 *.pyc
-__pycache__/
-media
+media/
 local_settings.py
 db.sqlite3
 db.sqlite3-journal
@@ -69,7 +71,7 @@ instance/
 .webassets-cache
 
 # Scrapy stuff:
-.scrapy
+.scrapy/
 
 # Sphinx documentation
 docs/_build/
@@ -79,7 +81,7 @@ docs/_build/
 target/
 
 # Jupyter Notebook
-.ipynb_checkpoints
+.ipynb_checkpoints/
 
 # IPython
 profile_default/
